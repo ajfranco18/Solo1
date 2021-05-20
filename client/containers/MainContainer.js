@@ -9,22 +9,22 @@ import CityContainer from './CityContainer.js';
 
 const mapStateToProps = state => ({
     // add pertinent state here
-    // income: state.cities.income,
-    // environment: state.cities.environment,
+    income: state.cities.income,
+    environment: state.cities.environment,
     city: state.cities.city
   });
 
   const mapDispatchToProps = dispatch => ({
     // create functions that will dispatch action creators
-    // setIncome: (event) => {
-    //   dispatch(actions.setIncome(event.target.value));
-    // },
-    // setEnvironment: (event) => {
-    //     dispatch(actions.setEnvironment(event.target.value));
-    // },
+    setIncome: (event) => {
+      dispatch(actions.setIncome(event.target.value));
+    },
+    setEnvironment: (event) => {
+        dispatch(actions.setEnvironment(event.target.value));
+    },
 
     getCity: (event) => {
-      dispatch(actions.getCity(event.target.name));
+      dispatch(actions.getCity(event.target.value));
   }
       });
 
@@ -37,8 +37,8 @@ const mapStateToProps = state => ({
         return (
         <div>
           <h1 id="header">Retire Abroad!</h1>
-          <CityGenerator getCity={this.props.getCity}/>
-          <CityContainer />
+          <CityGenerator getCity={this.props.getCity} setIncome={this.props.setIncome} setEnvironment={this.props.setEnvironment}/>
+          <CityContainer getCity={this.props.getCity} setIncome={this.props.setIncome} setEnvironment={this.props.setEnvironment}/>
         </div>
         );
     }

@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 
 
 // import child components...
-import CityDisplay from '../components/CityDisplay.js';
+// import CityDisplay from '../components/CityDisplay.js';
 
 const mapStateToProps = state => ({
     // provide pertinent state here
-    // income: state.cities.income,
-    // environment: state.cities.environment,
+    income: state.cities.income,
+    environment: state.cities.environment,
     city: state.cities.city
       
   });
@@ -23,10 +23,22 @@ const mapStateToProps = state => ({
 
     render() {
         return(
-          <div>
-            <h2>City</h2>
-            <CityDisplay city={this.props.city}/>
-          </div>
+          
+            
+            <div id="city" className='display'>
+              <h3>Your Recommended Retirement City:</h3>
+        <label htmlFor="income">Income: </label>
+        <span id="income">{this.props.income}</span>
+        <p>
+            <label htmlFor="enviroment"> Environment: </label>
+            <span id="environment">{this.props.environment}</span>
+        </p>
+        <p>
+            <label htmlFor="city"> Your City: </label>
+            <span id="city">{this.props.city}</span>
+        </p>
+    </div>
+          
         );
       }
     }
