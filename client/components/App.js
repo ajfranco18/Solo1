@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
+import MainContainer from '../containers/MainContainer.js'
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      
+  constructor(props) {
+    super(props);
 
-    };
   }
   
   
   render() {
     return (
       <div>
-        <h1>This is REACT</h1>
-        <p></p>
+         <MainContainer/>
       </div>
     );
   }
