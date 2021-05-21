@@ -32,7 +32,7 @@ const initialState = {
             if(state.income === '< $2,500' && state.environment === 'Beach') newCity = "Cartagena, Colombia"
             if(state.income === '< $2,500' && state.environment === 'Mountains') newCity = "Cuenca, Ecuador"
             if(state.income === '$2,500 to $3,500' && state.environment === 'City') newCity = "Lisbon, Portugal"
-            if(state.income === '$2,500 to $3,500' && state.environment === 'Beach') newCity = "Gozo, Malta"
+            if(state.income === '$2,500 to $3,500' && state.environment === 'Beach') newCity = "Guanacaste, Costa Rica"
             if(state.income === '$2,500 to $3,500' && state.environment === 'Mountains') newCity = "Cerro Azul, Panama"
             if(state.income === '> $3,500' && state.environment === 'City') newCity = "Madrid, Spain"
             if(state.income === '> $3,500' && state.environment === 'Beach') newCity = "Gozo, Malta"
